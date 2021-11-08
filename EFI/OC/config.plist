@@ -30,14 +30,6 @@
 				<key>Path</key>
 				<string>SSDT-EC-USBX-DESKTOP.aml</string>
 			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT-RHUB.aml</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-RHUB.aml</string>
-			</dict>
 		</array>
 		<key>Delete</key>
 		<array>
@@ -145,6 +137,8 @@
 			<false/>
 			<key>ResetLogoStatus</key>
 			<true/>
+			<key>SyncTableIds</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>Booter</key>
@@ -423,13 +417,13 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
-				<string>USBInjectAll.kext</string>
+				<string>AirportItlwm.kext</string>
 				<key>Comment</key>
-				<string>USBInjectAll</string>
+				<string>AirportItlwm</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/USBInjectAll</string>
+				<string>Contents/MacOS/AirportItlwm</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -441,13 +435,13 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
-				<string>AirportItlwm.kext</string>
+				<string>USBMap.kext</string>
 				<key>Comment</key>
-				<string>AirportItlwm</string>
+				<string>USBMap</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/AirportItlwm</string>
+				<string></string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -463,7 +457,7 @@
 				<key>Comment</key>
 				<string>itlwm</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/itlwm</string>
 				<key>MaxKernel</key>
@@ -477,13 +471,31 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
-				<string>IntelBluetoothInjector.kext</string>
+				<string>USBInjectAll.kext</string>
 				<key>Comment</key>
-				<string>IntelBluetoothInjector</string>
+				<string>USBInjectAll</string>
+				<key>Enabled</key>
+				<false/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/USBInjectAll</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+				<string>BlueToolFixup.kext</string>
+				<key>Comment</key>
+				<string>BlueToolFixup</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/IntelBluetoothInjector</string>
+				<string>Contents/MacOS/BlueToolFixup</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -513,13 +525,13 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
-				<string>NVMeFix.kext</string>
+				<string>IntelBluetoothInjector.kext</string>
 				<key>Comment</key>
-				<string>NVMeFix</string>
+				<string>IntelBluetoothInjector</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/NVMeFix</string>
+				<string></string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -531,17 +543,17 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
-				<string>AirportBrcmFixup.kext/Contents/PlugIns/AirPortBrcmNIC_Injector.kext</string>
+				<string>NVMeFix.kext</string>
 				<key>Comment</key>
-				<string></string>
+				<string>NVMeFix</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>ExecutablePath</key>
-				<string></string>
+				<string>Contents/MacOS/NVMeFix</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
-				<string>17.0.0</string>
+				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -811,6 +823,36 @@
 				<key>Skip</key>
 				<integer>0</integer>
 			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>Base</key>
+				<string></string>
+				<key>Comment</key>
+				<string>Enable TRIM for SSD</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>AEFQUExFIFNTRAA=</data>
+				<key>Identifier</key>
+				<string>com.apple.iokit.IOAHCIBlockStorage</string>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>Replace</key>
+				<data>AAAAAAAAAAAAAAA=</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+			</dict>
 		</array>
 		<key>Quirks</key>
 		<dict>
@@ -852,6 +894,8 @@
 			<false/>
 			<key>XhciPortLimit</key>
 			<true/>
+			<key>ProvideCurrentCpuInfo</key>
+			<false/>
 		</dict>
 		<key>Scheme</key>
 		<dict>
@@ -861,6 +905,8 @@
 			<string>x86_64</string>
 			<key>KernelCache</key>
 			<string>Auto</string>
+			<key>CustomKernel</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>Misc</key>
@@ -886,7 +932,7 @@
 			<key>PickerMode</key>
 			<string>External</string>
 			<key>PickerVariant</key>
-			<string>Modern</string>
+			<string>Auto</string>
 			<key>PollAppleHotKeys</key>
 			<false/>
 			<key>ShowPicker</key>
@@ -932,6 +978,8 @@
 				<string>PciRoot(0x0)/Pci(0x1,0x1)/Pci(0x0,0x0)/NVMe(0x1,11-22-33-44-55-66-77-88)/HD(1,GPT,00000000-0000-0000-0000-000000000000,0x800,0x64000)/\EFI\BOOT\BOOTX64.EFI</string>
 				<key>TextMode</key>
 				<false/>
+				<key>Flavour</key>
+				<string>Auto</string>
 			</dict>
 		</array>
 		<key>Security</key>
@@ -964,6 +1012,8 @@
 			<string>Default</string>
 			<key>Vault</key>
 			<string>Optional</string>
+			<key>AllowToggleSip</key>
+			<false/>
 		</dict>
 		<key>Tools</key>
 		<array>
@@ -984,6 +1034,8 @@
 				<false/>
 				<key>TextMode</key>
 				<false/>
+				<key>Flavour</key>
+				<string>OpenShell:UEFIShell:Shell</string>
 			</dict>
 			<dict>
 				<key>Arguments</key>
@@ -1002,6 +1054,8 @@
 				<false/>
 				<key>TextMode</key>
 				<false/>
+				<key>Flavour</key>
+				<string>MemTest</string>
 			</dict>
 			<dict>
 				<key>Arguments</key>
@@ -1020,6 +1074,8 @@
 				<false/>
 				<key>TextMode</key>
 				<false/>
+				<key>Flavour</key>
+				<string>Auto</string>
 			</dict>
 		</array>
 	</dict>
@@ -1044,13 +1100,15 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>-v keepsyms=1 alcid=1 -wegnoegpu igfxonln=1</string>
+				<string>-v keepsyms=1 debug=0x100 alcid=1 -wegnoegpu igfxonln=1</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>
 				<data></data>
 				<key>run-efi-updater</key>
 				<string>No</string>
+				<key>ForceDisplayRotationInEFI</key>
+				<integer>0</integer>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -1112,8 +1170,6 @@
 		<false/>
 		<key>Generic</key>
 		<dict>
-			<key>AdviseWindows</key>
-			<false/>
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>MLB</key>
@@ -1132,6 +1188,8 @@
 			<string>#your serial number</string>
 			<key>SystemUUID</key>
 			<string>#your system uuid</string>
+			<key>AdviseFeatures</key>
+			<false/>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -1175,6 +1233,8 @@
 			<integer>1</integer>
 			<key>PointerSpeedMul</key>
 			<integer>1</integer>
+			<key>GraphicsInputMirroring</key>
+			<true/>
 		</dict>
 		<key>Audio</key>
 		<dict>
@@ -1199,12 +1259,6 @@
 		</dict>
 		<key>ConnectDrivers</key>
 		<true/>
-		<key>Drivers</key>
-		<array>
-			<string>HfsPlus.efi</string>
-			<string>OpenRuntime.efi</string>
-			<string>OpenCanopy.efi</string>
-		</array>
 		<key>Input</key>
 		<dict>
 			<key>KeyFiltering</key>
@@ -1224,6 +1278,29 @@
 			<key>TimerResolution</key>
 			<integer>50000</integer>
 		</dict>
+		<key>Drivers</key>
+		<array>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Comment</key>
+				<string>HFS+ Driver</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>HfsPlus.efi</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>OpenRuntime.efi</string>
+			</dict>
+		</array>
 		<key>Output</key>
 		<dict>
 			<key>ClearScreenOnModeSwitch</key>
@@ -1233,8 +1310,6 @@
 			<key>DirectGopRendering</key>
 			<false/>
 			<key>ForceResolution</key>
-			<false/>
-			<key>GopPassThrough</key>
 			<false/>
 			<key>IgnoreTextInGraphics</key>
 			<false/>
@@ -1252,6 +1327,8 @@
 			<string>BuiltinGraphics</string>
 			<key>UgaPassThrough</key>
 			<false/>
+			<key>GopPassThrough</key>
+			<string>Disabled</string>
 		</dict>
 		<key>ProtocolOverrides</key>
 		<dict>
@@ -1289,6 +1366,8 @@
 			<false/>
 			<key>UnicodeCollation</key>
 			<false/>
+			<key>AppleEg2Info</key>
+			<false/>
 		</dict>
 		<key>Quirks</key>
 		<dict>
@@ -1313,6 +1392,8 @@
 			<key>TscSyncTimeout</key>
 			<integer>0</integer>
 			<key>UnblockFsConnect</key>
+			<false/>
+			<key>ForceOcWriteFlash</key>
 			<false/>
 		</dict>
 		<key>ReservedMemory</key>
