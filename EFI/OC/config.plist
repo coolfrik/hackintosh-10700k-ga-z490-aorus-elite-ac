@@ -229,6 +229,8 @@
 			<false/>
 			<key>SyncRuntimePermissions</key>
 			<true/>
+			<key>ResizeAppleGpuBars</key>
+			<integer>-1</integer>
 		</dict>
 	</dict>
 	<key>DeviceProperties</key>
@@ -238,7 +240,7 @@
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
-				<data>BwCbPg==</data>
+				<data>AACbPg==</data>
 				<key>framebuffer-patch-enable</key>
 				<data>AQAAAA==</data>
 				<key>framebuffer-con0-enable</key>
@@ -253,8 +255,10 @@
 				<data>AgAKAAAEAADHAwAA</data>
 				<key>framebuffer-con2-alldata</key>
 				<data>AwQIAAAIAADHAwAA</data>
+				<key>device-id</key>
+				<data>mz4AAA==</data>
 				<key>framebuffer-stolenmem	</key>
-				<data>AAAwAQ==</data>
+				<data>AAAAAg==</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1b,0x0)</key>
 			<dict>
@@ -457,7 +461,7 @@
 				<key>Comment</key>
 				<string>itlwm</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/itlwm</string>
 				<key>MaxKernel</key>
@@ -573,6 +577,8 @@
 				<string></string>
 				<key>MinKernel</key>
 				<string></string>
+				<key>Strategy</key>
+				<string>Disable</string>
 			</dict>
 		</array>
 		<key>Emulate</key>
@@ -1109,6 +1115,8 @@
 				<string>No</string>
 				<key>ForceDisplayRotationInEFI</key>
 				<integer>0</integer>
+				<key>SystemAudioVolumeDB</key>
+				<data>4g==</data>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -1235,6 +1243,12 @@
 			<integer>1</integer>
 			<key>GraphicsInputMirroring</key>
 			<true/>
+			<key>PointerPollMask</key>
+			<integer>-1</integer>
+			<key>PointerPollMax</key>
+			<integer>80</integer>
+			<key>PointerPollMin</key>
+			<integer>10</integer>
 		</dict>
 		<key>Audio</key>
 		<dict>
@@ -1256,6 +1270,16 @@
 			<integer>0</integer>
 			<key>VolumeAmplifier</key>
 			<integer>0</integer>
+			<key>AudioOutMask</key>
+			<integer>1</integer>
+			<key>DisconnectHda</key>
+			<false/>
+			<key>MinimumAssistGain</key>
+			<integer>-30</integer>
+			<key>MinimumAudibleGain</key>
+			<integer>-55</integer>
+			<key>MaximumGain</key>
+			<integer>-15</integer>
 		</dict>
 		<key>ConnectDrivers</key>
 		<true/>
@@ -1329,6 +1353,12 @@
 			<false/>
 			<key>GopPassThrough</key>
 			<string>Disabled</string>
+			<key>UIScale</key>
+			<integer>0</integer>
+			<key>ReconnectGraphicsOnConnect</key>
+			<false/>
+			<key>ResizeGpuBars</key>
+			<integer>-1</integer>
 		</dict>
 		<key>ProtocolOverrides</key>
 		<dict>
@@ -1394,6 +1424,8 @@
 			<key>UnblockFsConnect</key>
 			<false/>
 			<key>ForceOcWriteFlash</key>
+			<false/>
+			<key>EnableVmx</key>
 			<false/>
 		</dict>
 		<key>ReservedMemory</key>
